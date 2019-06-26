@@ -14,6 +14,7 @@ class FoodServiceContainer extends React.Component {
         this.state = {modalOpen: false};
     }
 
+
     handleModalClose = () => {
         this.setState({modalOpen: false});
     };
