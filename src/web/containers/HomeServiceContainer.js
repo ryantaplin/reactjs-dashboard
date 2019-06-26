@@ -1,15 +1,10 @@
 import React from 'react';
 
-class FoodServiceContainer extends React.Component {
+export default function FoodServiceContainer() {
 
-    render() {
-        return (
-            <div className="page-container" style={{height: '80vh'}}>
-            </div>
-        );
-    }
+    return (
+        <div className="page-container" style={{height: '80vh'}}>
+        </div>
+    );
 }
-
-export default FoodServiceContainer;
-
 
