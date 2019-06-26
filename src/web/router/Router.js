@@ -9,6 +9,8 @@ import HomePage from '../containers/HomeServiceContainer';
 
 import ErrorPage from '../containers/ErrorContainer'
 
+import PersonContext from '../contexts/PersonContext';
+
 class Router extends React.Component {
     render() {
         return (
@@ -20,7 +22,9 @@ class Router extends React.Component {
                         <Route path="/error" component={ErrorPage}/>
 
                         <Route path="/home" component={HomePage}/>
+                        <PersonContext.Provider value={{name: 'blah'}}>
                         <Route path="/food" component={FoodServiceContainer}/>
+                        </PersonContext.Provider>
                     </BrowserRouter>
                 </div>
             </div>
