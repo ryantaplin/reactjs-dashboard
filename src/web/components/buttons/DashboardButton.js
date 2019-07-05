@@ -1,23 +1,23 @@
 import React from 'react';
 import {Button} from 'reactstrap';
 
-export default function DashboardButton(props) {
+export default function DashboardButton({colour, icon, text, href}) {
 
     function drawIcon() {
-        const Icon = props.icon;
+        const Icon = icon;
         return Icon ? <Icon size={"100"}/> : "";
     }
 
     function getColour() {
-        return props.colour || "primary"
+        return colour || "primary"
     }
 
     function getUrl() {
-        return props.href || "/error"
+        return href || "/error"
     }
 
     function drawText() {
-        return props.text || "undefined";
+        return text || "undefined";
     }
 
     return (
@@ -31,7 +31,6 @@ export default function DashboardButton(props) {
                 </div>
             </Button>
         </a>
-
     );
 }
 
